@@ -23,7 +23,7 @@ export default function Home() {
           </span>
           <span className="hidden sm:inline-flex items-center gap-2">
             Anno IV
-            <span className="text-[var(--gold)]">·</span>
+            <span className="text-gold">·</span>
             Du Troisième Âge
           </span>
           <span className="inline-flex items-center gap-3">
@@ -45,7 +45,7 @@ export default function Home() {
             <div className="flex flex-col">
               <h1 className="font-display text-4xl tracking-[0.18em] sm:text-5xl">
                 <span className="text-foreground">GONDOR</span>{" "}
-                <span className="text-[var(--gold)]">CHIC</span>
+                <span className="text-gold">CHIC</span>
               </h1>
               <p className="mt-2 font-serif italic text-base text-muted-foreground">
                 De Minas Tirith aux quatre royaumes
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="relative mt-12 w-full max-w-md">
             <span
               aria-hidden
-              className="absolute left-1/2 -top-6 z-20 inline-flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-[var(--gold)] text-[var(--background)] shadow-md"
+              className="absolute left-1/2 -top-6 z-20 inline-flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-background shadow-md"
             >
               <PlusGlyph />
             </span>
@@ -75,7 +75,7 @@ export default function Home() {
                 <CardTitle className="font-display text-sm tracking-[0.32em] uppercase text-foreground">
                   Entrer dans la Citadelle
                 </CardTitle>
-                <CardDescription className="font-serif italic text-[var(--gold)]/90 text-base">
+                <CardDescription className="font-serif italic text-(--gold)/90 text-base">
                   Identifiez-vous pour accéder à votre garde-robe.
                 </CardDescription>
               </CardHeader>
@@ -154,7 +154,7 @@ function ShieldEmblem() {
     <svg
       aria-hidden
       viewBox="0 0 64 80"
-      className="h-16 w-14 shrink-0 text-[var(--gold)]"
+      className="h-16 w-14 shrink-0 text-gold"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.2"
@@ -173,7 +173,7 @@ function DiamondDivider() {
       <span className="h-px flex-1 bg-border" />
       <span
         aria-hidden
-        className="block h-2 w-2 rotate-45 bg-[var(--gold)]"
+        className="block h-2 w-2 rotate-45 bg-gold"
       />
       <span className="h-px flex-1 bg-border" />
     </div>
@@ -205,7 +205,7 @@ function ArchOrnament() {
   return (
     <svg
       aria-hidden
-      className="pointer-events-none absolute right-0 top-10 hidden h-[680px] w-[520px] text-[var(--gold)]/40 lg:block"
+      className="pointer-events-none absolute right-0 top-10 hidden h-170 w-130 text-(--gold)/40 lg:block"
       viewBox="0 0 520 680"
       fill="none"
       stroke="currentColor"
