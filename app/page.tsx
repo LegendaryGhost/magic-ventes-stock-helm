@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +13,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log("submit");
+    router.push("/dashboard");
+  };
+
   return (
     <div className="flex flex-1 flex-col bg-background text-foreground">
       <header className="border-b border-border/60">
@@ -81,7 +93,7 @@ export default function Home() {
               </CardHeader>
 
               <CardContent>
-                <form className="flex flex-col gap-5" action="">
+                <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                   <div className="flex flex-col gap-2">
                     <Label
                       htmlFor="pseudo"
@@ -116,12 +128,12 @@ export default function Home() {
                     />
                   </div>
 
-                  <Button
+                  <button
                     type="submit"
                     className="mt-4 h-12 w-full rounded-sm bg-primary text-primary-foreground font-display text-xs tracking-[0.32em] uppercase hover:bg-primary/90"
                   >
                     S&apos;identifier&nbsp;&nbsp;→
-                  </Button>
+                  </button>
                 </form>
               </CardContent>
             </Card>
@@ -131,7 +143,7 @@ export default function Home() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5 text-[11px] tracking-[0.3em] uppercase text-muted-foreground font-display">
-          <span>© S.A. 3019 — Gondor Chic</span>
+          <span>Gondor Chic</span>
           <nav className="hidden gap-8 sm:flex">
             <a href="#" className="transition-colors hover:text-foreground">
               Mentions légales
