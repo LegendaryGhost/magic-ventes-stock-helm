@@ -32,7 +32,7 @@ const PRODUCTS = [
 ];
 
 export default function DashboardPage() {
-  const user = { firstName: "Firstname", lastName: "Lastname" };
+  const user = { firstName: "Aragorn", lastName: "Elessar" };
   
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({
     1: 1,
@@ -70,7 +70,7 @@ export default function DashboardPage() {
         </div>
 
         <h3 className="font-display text-sm tracking-[0.25em] uppercase text-muted-foreground mb-6">
-          Garde-robe disponible
+          Garde-robe du jour
         </h3>
         
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
